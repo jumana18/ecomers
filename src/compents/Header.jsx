@@ -5,6 +5,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 function App() {
   return (
     <>
+    {/* header */}
       <div className="flex flex-col  ">
         {/*Top Banner*/}
 
