@@ -6,7 +6,7 @@ import FlashSalesHeader from "../compents/Home/FlashSales";
 import SellingPrd from "../compents/Home/SellingPrd";
 import Categories from "../compents/Home/Categories";
 import OurPrd from "../compents/Home/OurPrd";
-import Footer from "../compents/Footer";
+import Featur from "../compents/Home/Featur";
 const Home = () => {
   return (
     <>
@@ -21,6 +21,7 @@ const Home = () => {
       <SellingPrd />
       <Categories />
       <OurPrd />
+      <Featur/>
     </>
   );
 };

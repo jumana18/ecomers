@@ -1,5 +1,7 @@
 import React from 'react'
-import BestCard from './BestCard';
+import ProductCrd from './ProductCrd';
+import {bestSellingItems} from "../../constance/dummyData (3)"
+
 
 const SellingPrd = () => {
   return (
@@ -18,13 +20,17 @@ const SellingPrd = () => {
 
           <div class="flex items-center gap-3  ">
             <button class="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600 transition mt-16">
-              View All 
+              View All
             </button>
           </div>
         </div>
-        <BestCard/>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {bestSellingItems.map((item) => (
+            <ProductCrd key={item.image} item={item} />
+          ))}
+        </div>
       </section>
-     
     </>
   );
 }

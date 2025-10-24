@@ -401,22 +401,22 @@ export const bestSellingItems = [
     stock: 80,
     isBestSeller: true,
   },
-  {
-    id: "4",
-    name: "Boat Stone 1000 Portable Bluetooth Speaker",
-    category: "Electronics",
-    description:
-      "14W dual drivers, deep bass, waterproof design — perfect for outdoor parties.",
-    originalPrice: 4999,
-    discountPercent: 60,
-    salePrice: 1999,
-    rating: 4.6,
-    reviewsCount: 7024,
-    image:
-      "https://img.tatacliq.com/images/i6/1348Wx2000H/MP000000002973184_1348Wx2000H_20200802181324.jpeg",
-    stock: 500,
-    isBestSeller: true,
-  },
+  // {
+  //   id: "4",
+  //   name: "Boat Stone 1000 Portable Bluetooth Speaker",
+  //   category: "Electronics",
+  //   description:
+  //     "14W dual drivers, deep bass, waterproof design — perfect for outdoor parties.",
+  //   originalPrice: 4999,
+  //   discountPercent: 60,
+  //   salePrice: 1999,
+  //   rating: 4.6,
+  //   reviewsCount: 7024,
+  //   image:
+  //     "https://img.tatacliq.com/images/i6/1348Wx2000H/MP000000002973184_1348Wx2000H_20200802181324.jpeg",
+  //   stock: 500,
+  //   isBestSeller: true,
+  // },
   {
     id: "5",
     name: "Wooden Study Table with Storage",
@@ -496,21 +496,21 @@ export const bestSellingItems = [
     stock: 100,
     isBestSeller: true,
   },
-  {
-    id: "10",
-    name: "Adidas Gym Duffle Bag",
-    category: "Sports & Fitness",
-    description: "Durable, water-resistant bag with multiple compartments.",
-    originalPrice: 2999,
-    discountPercent: 46,
-    salePrice: 1599,
-    rating: 4.8,
-    reviewsCount: 2987,
-    image:
-      "https://www.rebelsport.co.nz/media/catalog/product/8/2/8224947001_default_1_ee5c.jpg?auto=webp&format=webply&width=390&fit=cover&quality=50",
-    stock: 350,
-    isBestSeller: true,
-  },
+  // {
+  //   id: "10",
+  //   name: "Adidas Gym Duffle Bag",
+  //   category: "Sports & Fitness",
+  //   description: "Durable, water-resistant bag with multiple compartments.",
+  //   originalPrice: 2999,
+  //   discountPercent: 46,
+  //   salePrice: 1599,
+  //   rating: 4.8,
+  //   reviewsCount: 2987,
+  //   image:
+  //     "https://www.rebelsport.co.nz/media/catalog/product/8/2/8224947001_default_1_ee5c.jpg?auto=webp&format=webply&width=390&fit=cover&quality=50",
+  //   stock: 350,
+  //   isBestSeller: true,
+  // },
 ];
 
 
@@ -593,43 +593,43 @@ export const productData = [
       { color: "Gray", size: "XL" },
     ],
   },
-  {
-    id: "5",
-    name: "Wooden Coffee Table",
-    description:
-      "Minimalist design coffee table made of solid oak wood with smooth finish.",
-    category: "Furniture",
-    brand: "UrbanCraft",
-    originalPrice: 7499,
-    discountPercent: 33,
-    salePrice: 4999,
-    stock: 65,
-    rating: 4.6,
-    reviewsCount: 987,
-    image:
-      "https://images.woodenstreet.de/image/data/coffee-table/reid-coffee-table-revised/updated-set/honey/1.jpg",
-    variants: [{ color: "Walnut" }, { color: "Natural Oak" }],
-  },
-  {
-    id: "6",
-    name: "Puma Unisex Sneakers",
-    description:
-      "Lightweight everyday sneakers with flexible outsole and breathable mesh.",
-    category: "Fashion",
-    brand: "Puma",
-    originalPrice: 4999,
-    discountPercent: 42,
-    salePrice: 2899,
-    stock: 300,
-    rating: 4.5,
-    reviewsCount: 3430,
-    image:
-      "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_300,h_300/global/402185/02/sv01/fnd/IND/fmt/png/Court-Shatter-Men's-Sportstyle-Sneakers",
-    variants: [
-      { color: "Black", size: "8" },
-      { color: "White", size: "9" },
-    ],
-  },
+  // {
+  //   id: "5",
+  //   name: "Wooden Coffee Table",
+  //   description:
+  //     "Minimalist design coffee table made of solid oak wood with smooth finish.",
+  //   category: "Furniture",
+  //   brand: "UrbanCraft",
+  //   originalPrice: 7499,
+  //   discountPercent: 33,
+  //   salePrice: 4999,
+  //   stock: 65,
+  //   rating: 4.6,
+  //   reviewsCount: 987,
+  //   image:
+  //     "https://images.woodenstreet.de/image/data/coffee-table/reid-coffee-table-revised/updated-set/honey/1.jpg",
+  //   variants: [{ color: "Walnut" }, { color: "Natural Oak" }],
+  // },
+  // {
+  //   id: "6",
+  //   name: "Puma Unisex Sneakers",
+  //   description:
+  //     "Lightweight everyday sneakers with flexible outsole and breathable mesh.",
+  //   category: "Fashion",
+  //   brand: "Puma",
+  //   originalPrice: 4999,
+  //   discountPercent: 42,
+  //   salePrice: 2899,
+  //   stock: 300,
+  //   rating: 4.5,
+  //   reviewsCount: 3430,
+  //   image:
+  //     "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_300,h_300/global/402185/02/sv01/fnd/IND/fmt/png/Court-Shatter-Men's-Sportstyle-Sneakers",
+  //   variants: [
+  //     { color: "Black", size: "8" },
+  //     { color: "White", size: "9" },
+  //   ],
+  // },
   {
     id: "7",
     name: "L’Oréal Paris Moisture Boost Cream",

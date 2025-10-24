@@ -1,6 +1,8 @@
 import React from 'react'
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
-import ExploreCard from './ExploreCard';
+
+import {productData}from "../../constance/dummyData (3)"
+import ProductCrd from './ProductCrd';
 
 const OurPrd = () => {
   return (
@@ -26,14 +28,17 @@ const OurPrd = () => {
             </button>
           </div>
         </div>
-            <ExploreCard/>
-            
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {productData.map((item) => (
+            <ProductCrd key={item.image} item={item} />
+          ))}
+        </div>
+
         <div class="flex justify-center ">
           <button class="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600 transition mt-16">
             View All Products
           </button>
         </div>
-
       </section>
     </>
   );
