@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FaSearch, FaRegHeart } from "react-icons/fa";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import { MdOutlineShoppingCart, MdOutlineCancel } from "react-icons/md";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import { LuShoppingBag } from "react-icons/lu";
+import { IoStarOutline } from "react-icons/io5";
+import { CiLogout } from "react-icons/ci";
+import { IoPersonOutline } from "react-icons/io5";
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -54,7 +57,7 @@ function Header() {
         {/* Right Section */}
         <div className="flex items-center space-x-3 sm:space-x-4">
           {/* Search (hidden on small screens) */}
-          <div className="hidden sm:flex items-center bg-gray-100 px-3 py-2 rounded-md">
+          <div className="hidden sm:flex items-center bg-[#F5F5F5] px-3 py-2 rounded-md">
             <input
               type="text"
               placeholder="Search..."
@@ -63,12 +66,55 @@ function Header() {
             <FaSearch size={18} className="text-gray-500" />
           </div>
 
-          {/* Icons */}
+          {/* Right Icons */}
           <FaRegHeart size={22} className="text-gray-700 cursor-pointer" />
-          <MdOutlineShoppingCart
-            size={22}
-            className="text-gray-700 cursor-pointer"
-          />
+
+          {/* Crt */}
+          <div className="relative group">
+            <MdOutlineShoppingCart
+              size={22}
+              className="text-gray-700 cursor-pointer text-xl transition"
+            />
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              2
+            </span>
+          </div>
+
+          {/* User Dropdown */}
+
+          <div className="relative group ">
+            <button className="w-9 h-9 flex items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-700">
+              <IoPersonOutline className="text-xl" />
+            </button>
+            {/* Hover Dropdown */}
+            <div
+              className=" absolute right-0 mt-3 w-56 rounded-lg shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out 
+            bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 text-white backdrop-blur-lg z-50 "
+            >
+              <ul className="py-2 text-sm">
+                <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
+                  <IoPersonOutline className=" text-lg" />
+                  <span>Manage My Account</span>
+                </li>
+                <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
+                  <LuShoppingBag className="text-lg" />
+                  <span>Manage My Account</span>
+                </li>
+                <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
+                  <MdOutlineCancel className="text-xl" />
+                  <span>Manage My Account</span>
+                </li>
+                <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
+                  <IoStarOutline className="text-xl" />
+                  <span>Manage My Account</span>
+                </li>
+                <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
+                  <CiLogout className=" text-xl" />
+                  <span>Manage My Account</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -81,7 +127,7 @@ function Header() {
 
         {/* --- Mobile Menu Drawer --- */}
         <div
-          className={`absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center text-lg font-medium text-gray-800 space-y-4 py-6 transition-transform duration-300 md:hidden ${
+          className={`absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center text-lg font-medium text-gray-800 space-y-4 py-6 transition-transform duration-300 md:hidden  ${
             menuOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-6 opacity-0 pointer-events-none"

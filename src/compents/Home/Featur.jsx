@@ -3,7 +3,8 @@ import Icon from "../../assets/ps5-slim-goedkope-playstation_large 1.png";
 import woman from "../../assets/455c8d6408463f7e8f57dd3048a2444dbfa0cb90 (1).jpg";
 import speaker from "../../assets/e5659d572977438364a41d7e8c9d1e9a794d43ed.png";
 import perfume from "../../assets/15315cd15102562cf220504d288fa568eaa816dd.png";
-import { FaShippingFast, FaHeadset, FaRegCheckCircle } from "react-icons/fa";
+import Serviceicon from "./Serviceicon";
+import { GoArrowUp } from "react-icons/go";
 
 const Featur = () => {
   return (
@@ -101,42 +102,13 @@ const Featur = () => {
       </div>
 
       {/* Services Section */}
-      <div className="mt-20 flex flex-col md:flex-row justify-around items-center gap-12 text-center">
-        <div className="flex flex-col items-center text-center">
-          <div className=" bg-gray-200 rounded-full p-4 ">
-            <div className="bg-black text-white rounded-full p-4">
-              <FaShippingFast className="text-2xl" />
-            </div>
-          </div>
-          <h3 className="font-bold text-lg ">FREE AND FAST DELIVERY</h3>
-          <p className="text-gray-800 text-sm">
-            Free delivery for all orders over $140
-          </p>
-        </div>
+      
+      <Serviceicon/>
 
-        <div className="flex flex-col items-center text-center">
-          <div className=" bg-gray-200 rounded-full p-4 ">
-            <div className="bg-black text-white rounded-full p-4">
-              <FaHeadset className="text-2xl" />
-            </div>
-          </div>
-          <h3 className="font-bold text-lg ">24/7 CUSTOMER SERVICE</h3>
-          <p className="text-gray-800 text-sm">
-            Friendly 24/7 customer support{" "}
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center text-center">
-          <div className=" bg-gray-200 rounded-full p-4 ">
-            <div className="bg-black text-white rounded-full p-4">
-              <FaRegCheckCircle className="text-2xl" />
-            </div>
-          </div>
-          <h3 className="font-bold text-lg ">MONEY BACK GUARANTEE</h3>
-          <p className="text-gray-800 text-sm">
-            We reurn money within 30 days{" "}
-          </p>
-        </div>
+      <div className="flex items-center gap-3 ml-[80rem]  ">
+        <button className="w-5xl h-3xl flex items-center justify-center bg-gray-200  rounded-full text-4xl ">
+          <GoArrowUp />
+        </button>
       </div>
     </section>
   );
