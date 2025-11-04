@@ -6,6 +6,8 @@ import { LuShoppingBag } from "react-icons/lu";
 import { IoStarOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
 import { IoPersonOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -67,17 +69,29 @@ function Header() {
           </div>
 
           {/* Right Icons */}
-          <FaRegHeart size={22} className="text-gray-700 cursor-pointer" />
+          <Link to="/wishlisPage" className="relative group">
+            {/* Heart Icon */}
+            <FaRegHeart
+              size={22}
+              className="text-gray-700 cursor-pointer  transition"
+            />
 
+            {/* Red Badge */}
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              4
+            </span>
+          </Link>
           {/* Crt */}
           <div className="relative group">
-            <MdOutlineShoppingCart
-              size={22}
-              className="text-gray-700 cursor-pointer text-xl transition"
-            />
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              2
-            </span>
+            <Link to="/CrdPage" className="relative group">
+              <MdOutlineShoppingCart
+                size={22}
+                className="text-gray-700 cursor-pointer text-xl transition"
+              />
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                2
+              </span>
+            </Link>
           </div>
 
           {/* User Dropdown */}
