@@ -3,7 +3,7 @@ import WishlistSection from '../compents/Wishlist/WishlistSection'
 import SeeAll from '../compents/Wishlist/SeeAll'
 
 
-const WishlistPage = () => {
+const WishlisTPage = () => {
   return (
    <>
    <WishlistSection/>
@@ -12,4 +12,4 @@ const WishlistPage = () => {
   )
 }
 
-export default WishlistPage
+export default WishlisTPage

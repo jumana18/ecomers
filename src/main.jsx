@@ -9,9 +9,9 @@ import About from './pages/AboutPage.jsx'
 import SignUp from './pages/SignUpPage.jsx'
 import Login from './pages/Login.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
-import Wishlist from './pages/WishlistPage.jsx'
-import CrdPage from './pages/CrdPage.jsx'
-
+import WishlisTPage from './pages/Wishlist.jsx'
+import CartPage from './pages/CartPage.jsx'
+import MyAccount from './pages/MyAccount.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,13 +42,17 @@ const router = createBrowserRouter([
         element: <ErrorPage />,
       },
       {
-        path: "/wishlisPage",
-        element: <Wishlist/>
+        path: "/WishlisTPage",
+        element: <WishlisTPage />,
       },
       {
-        path: "/CrdPage",
-        element: <CrdPage/>
-      }
+        path: "/CartPage",
+        element: <CartPage />,
+      },
+      {
+        path: "/MyAccount",
+        element: <MyAccount/>
+      },
     ],
   },
 ]);

@@ -69,7 +69,7 @@ function Header() {
           </div>
 
           {/* Right Icons */}
-          <Link to="/wishlisPage" className="relative group">
+          <Link to="/WishlisTPage" className="relative group">
             {/* Heart Icon */}
             <FaRegHeart
               size={22}
@@ -83,7 +83,7 @@ function Header() {
           </Link>
           {/* Crt */}
           <div className="relative group">
-            <Link to="/CrdPage" className="relative group">
+            <Link to="/CartPage" className="relative group">
               <MdOutlineShoppingCart
                 size={22}
                 className="text-gray-700 cursor-pointer text-xl transition"
@@ -106,25 +106,27 @@ function Header() {
             bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 text-white backdrop-blur-lg z-50 "
             >
               <ul className="py-2 text-sm">
-                <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
-                  <IoPersonOutline className=" text-lg" />
-                  <span>Manage My Account</span>
-                </li>
+                <Link to="/MyAccount" className="relative group">
+                  <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
+                    <IoPersonOutline className=" text-lg" />
+                    <span>Manage My Account</span>
+                  </li>
+                </Link>
                 <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
                   <LuShoppingBag className="text-lg" />
-                  <span>Manage My Account</span>
+                  <span>My Order</span>
                 </li>
                 <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
                   <MdOutlineCancel className="text-xl" />
-                  <span>Manage My Account</span>
+                  <span>My Cancellations</span>
                 </li>
                 <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
                   <IoStarOutline className="text-xl" />
-                  <span>Manage My Account</span>
+                  <span>My Reviews</span>
                 </li>
                 <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
                   <CiLogout className=" text-xl" />
-                  <span>Manage My Account</span>
+                  <span>Logout</span>
                 </li>
               </ul>
             </div>
