@@ -12,6 +12,8 @@ import ErrorPage from './pages/ErrorPage.jsx'
 import WishlisTPage from './pages/Wishlist.jsx'
 import CartPage from './pages/CartPage.jsx'
 import MyAccount from './pages/MyAccount.jsx'
+import CheckoutPage from './pages/CheckoutPage.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
         path: "/MyAccount",
         element: <MyAccount/>
       },
+      {
+        path: "/CheckoitPage",
+        element: <CheckoutPage/>
+      }
     ],
   },
 ]);

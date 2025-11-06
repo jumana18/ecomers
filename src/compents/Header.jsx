@@ -3,9 +3,8 @@ import { FaSearch, FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart, MdOutlineCancel } from "react-icons/md";
 import { FiMenu, FiX } from "react-icons/fi";
 import { LuShoppingBag } from "react-icons/lu";
-import { IoStarOutline } from "react-icons/io5";
+import { IoStarOutline, IoPersonOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
-import { IoPersonOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -13,14 +12,14 @@ function Header() {
 
   return (
     <>
-      {/* --- Header Banner  --- */}
+      {/* --- Header Banner --- */}
       <div className="flex flex-col relative">
-        {/* --- Top Banner --- */}
-        <div className="bg-black text-white text-center py-3 text-sm sm:text-base flex flex-col sm:flex-row justify-center sm:justify-between items-center px-4 sm:px-8 md:px-16 h-auto">
+        {/* Top Banner */}
+        <div className="bg-black text-white text-center py-3 text-xs sm:text-sm md:text-base flex flex-col sm:flex-row justify-center sm:justify-between items-center px-3 sm:px-8 md:px-16 gap-2">
           {/* Offer Text */}
-          <p className="mb-2 sm:mb-0  flex justify-center items-center ">
-            Summer Sale For All Swim Suits And Free Express Delivery -{" "}
-            <span className="font-semibold underline cursor-pointer">
+          <p className="flex flex-wrap justify-center items-center text-center">
+            Summer Sale For All Swim Suits And Free Express Delivery —{" "}
+            <span className="font-semibold underline cursor-pointer ml-1">
               ShopNow
             </span>
           </p>
@@ -34,81 +33,71 @@ function Header() {
       </div>
 
       {/* --- Header Section --- */}
-      <header className="w-full flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-32 py-4 border-b relative bg-white">
+      <header className="w-full flex justify-between items-center px-4 sm:px-8 md:px-16 lg:px-32 py-3 sm:py-4 border-b relative bg-white">
         {/* Logo */}
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
           Exclusive
         </h1>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-8 text-gray-800 text-lg font-medium">
-          <a href="/" className="hover:text-black">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-6 lg:space-x-8 text-gray-800 text-sm lg:text-lg font-medium">
+          <Link to="/" className="hover:text-black">
             Home
-          </a>
-          <a href="/contact" className="hover:text-black">
+          </Link>
+          <Link to="/contact" className="hover:text-black">
             Contact
-          </a>
-          <a href="/about" className="hover:text-black">
+          </Link>
+          <Link to="/about" className="hover:text-black">
             About
-          </a>
-          <a href="/signup" className="hover:text-black">
+          </Link>
+          <Link to="/signup" className="hover:text-black">
             Sign Up
-          </a>
+          </Link>
         </nav>
 
         {/* Right Section */}
-        <div className="flex items-center space-x-3 sm:space-x-4">
-          {/* Search (hidden on small screens) */}
-          <div className="hidden sm:flex items-center bg-[#F5F5F5] px-3 py-2 rounded-md">
+        <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4">
+          {/* Search Input (hidden on small screens) */}
+          <div className="hidden sm:flex items-center bg-[#F5F5F5] px-2 sm:px-3 py-1.5 sm:py-2 rounded-md">
             <input
               type="text"
               placeholder="Search..."
-              className="bg-transparent outline-none text-sm w-32 sm:w-48"
+              className="bg-transparent outline-none text-xs sm:text-sm w-24 sm:w-40 md:w-48"
             />
-            <FaSearch size={18} className="text-gray-500" />
+            <FaSearch size={16} className="text-gray-500" />
           </div>
 
-          {/* Right Icons */}
+          {/* Wishlist Icon */}
           <Link to="/WishlisTPage" className="relative group">
-            {/* Heart Icon */}
-            <FaRegHeart
-              size={22}
-              className="text-gray-700 cursor-pointer  transition"
-            />
-
-            {/* Red Badge */}
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <FaRegHeart size={20} className="text-gray-700 cursor-pointer" />
+            <span className="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] sm:text-xs w-4 h-4 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               4
             </span>
           </Link>
-          {/* Crt */}
-          <div className="relative group">
-            <Link to="/CartPage" className="relative group">
-              <MdOutlineShoppingCart
-                size={22}
-                className="text-gray-700 cursor-pointer text-xl transition"
-              />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                2
-              </span>
-            </Link>
-          </div>
+
+          {/* Cart Icon */}
+          <Link to="/CartPage" className="relative group">
+            <MdOutlineShoppingCart
+              size={20}
+              className="text-gray-700 cursor-pointer"
+            />
+            <span className="absolute -top-1.5 -right-2 bg-red-500 text-white text-[10px] sm:text-xs w-4 h-4 flex items-center justify-center rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              2
+            </span>
+          </Link>
 
           {/* User Dropdown */}
-
-          <div className="relative group ">
-            <button className="w-9 h-9 flex items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-700">
-              <IoPersonOutline className="text-xl" />
+          <div className="relative group">
+            <button className="w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full bg-red-500 text-white hover:bg-red-700">
+              <IoPersonOutline className="text-base sm:text-xl" />
             </button>
-            {/* Hover Dropdown */}
-            <div
-              className=" absolute right-0 mt-3 w-56 rounded-lg shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out 
-            bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 text-white backdrop-blur-lg z-50 "
-            >
+
+            {/* Dropdown Menu */}
+            <div className="absolute right-0 mt-2 sm:mt-3 w-44 sm:w-56 rounded-lg shadow-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 ease-out bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 text-white backdrop-blur-lg z-50">
               <ul className="py-2 text-sm">
-                <Link to="/MyAccount" className="relative group">
+                <Link to="/MyAccount">
                   <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
-                    <IoPersonOutline className=" text-lg" />
+                    <IoPersonOutline className="text-lg" />
                     <span>Manage My Account</span>
                   </li>
                 </Link>
@@ -125,7 +114,7 @@ function Header() {
                   <span>My Reviews</span>
                 </li>
                 <li className="px-5 py-2 flex items-center gap-3 hover:bg-white/10 cursor-pointer">
-                  <CiLogout className=" text-xl" />
+                  <CiLogout className="text-xl" />
                   <span>Logout</span>
                 </li>
               </ul>
@@ -141,42 +130,42 @@ function Header() {
           </button>
         </div>
 
-        {/* --- Mobile Menu Drawer --- */}
+        {/* Mobile Dropdown Menu */}
         <div
-          className={`absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center text-lg font-medium text-gray-800 space-y-4 py-6 transition-transform duration-300 md:hidden  ${
+          className={`absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center text-base font-medium text-gray-800 space-y-4 py-6 transition-all duration-300 md:hidden ${
             menuOpen
               ? "translate-y-0 opacity-100"
               : "-translate-y-6 opacity-0 pointer-events-none"
           }`}
         >
-          <a
-            href="/"
-            className="hover:text-red-500"
+          <Link
+            to="/"
             onClick={() => setMenuOpen(false)}
+            className="hover:text-red-500"
           >
             Home
-          </a>
-          <a
-            href="/contact"
-            className="hover:text-red-500"
+          </Link>
+          <Link
+            to="/contact"
             onClick={() => setMenuOpen(false)}
+            className="hover:text-red-500"
           >
             Contact
-          </a>
-          <a
-            href="/about"
-            className="hover:text-red-500"
+          </Link>
+          <Link
+            to="/about"
             onClick={() => setMenuOpen(false)}
+            className="hover:text-red-500"
           >
             About
-          </a>
-          <a
-            href="/signup"
-            className="hover:text-red-500"
+          </Link>
+          <Link
+            to="/signup"
             onClick={() => setMenuOpen(false)}
+            className="hover:text-red-500"
           >
             Sign Up
-          </a>
+          </Link>
         </div>
       </header>
     </>

@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const CartSummary = ({ subtotal }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-7xl mx-auto">
       {/* Coupon Section */}
@@ -30,7 +34,10 @@ const CartSummary = ({ subtotal }) => {
           <span>Total:</span>
           <span>${subtotal}</span>
         </div>
-        <button className="bg-red-500 text-white w-full py-2 rounded-md mt-3 hover:bg-red-600">
+        <button
+          onClick={() => navigate("/CheckoitPage")}
+          className="bg-red-500 text-white w-full py-2 rounded-md mt-3 hover:bg-red-600"
+        >
           Proceed to checkout
         </button>
       </div>
