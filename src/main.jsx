@@ -13,6 +13,7 @@ import WishlisTPage from './pages/Wishlist.jsx'
 import CartPage from './pages/CartPage.jsx'
 import MyAccount from './pages/MyAccount.jsx'
 import CheckoutPage from './pages/CheckoutPage.jsx'
+import  ProductCardPage from './pages/ProductCardPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -53,12 +54,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/MyAccount",
-        element: <MyAccount/>
+        element: <MyAccount />,
       },
       {
         path: "/CheckoitPage",
-        element: <CheckoutPage/>
-      }
+        element: <CheckoutPage />,
+      },
+      {
+        path: "/ ProductCardPage",
+        element: <ProductCardPage/>
+      },
     ],
   },
 ]);
