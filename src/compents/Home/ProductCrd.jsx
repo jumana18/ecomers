@@ -2,9 +2,11 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline, IoStarSharp } from "react-icons/io5";
+import { Link } from "react-router";
 
 const ProductCrd = ({ item }) => {
   return (
+    <Link to={`/product-details/${item.id}`}>
     <div className="max-w-[270px] h-auto p-3 relative group bg-white shadow-md rounded-xl overflow-hidden">
       {/* Action Icons */}
       {/* Discount Badge */}
@@ -61,6 +63,7 @@ const ProductCrd = ({ item }) => {
 
       {/* Add to Cart Button (hover display) */}
     </div>
+    </Link>
   );
 };
 
