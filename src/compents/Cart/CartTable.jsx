@@ -23,7 +23,7 @@ const CartTable = ({ cartItems, removeItem, updateQuantity }) => {
                   onClick={() => removeItem(item.id)}
                   className="text-red-500 font-bold hover:text-red-700"
                 >
-                  ✕
+                  X
                 </button>
                 <img
                   src={item.image}

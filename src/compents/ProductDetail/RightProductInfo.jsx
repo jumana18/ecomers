@@ -121,29 +121,33 @@ const RightProductInfo = () => {
         </div>
 
         {/* --- Free Delivery Section --- */}
-        <div className="border border-gray-300 rounded-md mt-6">
-          <div className="flex items-start gap-3 p-4 border-b border-gray-200">
-            <PiTruckLight className="text-3xl text-gray-700" />
-            <div>
-              <h4 className="text-base font-medium text-black">
-                Free Delivery
-              </h4>
-              <p className="text-sm text-gray-500">
-                Enter your postal code for Delivery Availability
-              </p>
+        <div className="mt-6 w-[80%]">
+          {" "}
+          {/* Adjust width here (e.g., 80%) */}
+          <div className="border border-gray-300 rounded-md">
+            <div className="flex items-start gap-3 p-4 border-b border-gray-200">
+              <PiTruckLight className="text-3xl text-gray-700" />
+              <div>
+                <h4 className="text-base font-medium text-black">
+                  Free Delivery
+                </h4>
+                <p className="text-sm text-gray-500">
+                  Enter your postal code for Delivery Availability
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div className="flex items-start gap-3 p-4">
-            <TbReplace className="text-3xl text-gray-700" />
-            <div>
-              <h4 className="text-base font-medium text-black">
-                Return Delivery
-              </h4>
-              <p className="text-sm text-gray-500">
-                Free 30 Days Delivery Returns.{" "}
-                <span className="underline cursor-pointer">Details</span>
-              </p>
+            <div className="flex items-start gap-3 p-4">
+              <TbReplace className="text-3xl text-gray-700" />
+              <div>
+                <h4 className="text-base font-medium text-black">
+                  Return Delivery
+                </h4>
+                <p className="text-sm text-gray-500">
+                  Free 30 Days Delivery Returns.{" "}
+                  <span className="underline cursor-pointer">Details</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>

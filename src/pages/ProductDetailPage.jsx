@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import ProductImg from '../compents/ProductDetail/ProductImg';
 import RightProductInfo from '../compents/ProductDetail/RightProductInfo';
+import RelatedItem from '../compents/ProductDetail/RelatedItem';
 
 const ProductDetailPage = () => {
   return (
@@ -24,6 +25,7 @@ const ProductDetailPage = () => {
       <ProductImg/>
       <RightProductInfo/>
       </div>
+     <RelatedItem/>
     </>
   );
 }

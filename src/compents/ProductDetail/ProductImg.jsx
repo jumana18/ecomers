@@ -19,7 +19,7 @@ const ProductImg = () => {
             src={img}
             alt={`Thumbnail ${i + 1}`}
             onClick={() => setMainImage(img)}
-            className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 object-cover rounded-sm cursor-pointer bg-gray-100 hover:opacity-80 border-2 transition-all duration-200 ${
+            className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-36 lg:h-36 object-cover rounded-sm cursor-pointer bg-gray-100 hover:opacity-80 border-2 transition-all duration-200 ${
               mainImage === img ? "border-gray-400" : "border-transparent"
             }`}
           />
