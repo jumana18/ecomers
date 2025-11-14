@@ -2,9 +2,9 @@ import React from "react";
 
 const CartTable = ({ cartItems, removeItem, updateQuantity }) => {
   return (
-    <div className="overflow-x-auto border border-gray-200 rounded-lg shadow-sm max-w-7xl mx-auto w-full ">
+    <div className="overflow-x-auto  max-w-7xl mx-auto w-full">
       <table className="w-full text-left text-sm md:text-base table-fixed">
-        <thead className="bg-gray-100 border-b">
+        <thead className="bg-gray-100">
           <tr>
             <th className="py-3 px-4 w-[45%]">Product</th>
             <th className="py-3 px-4 w-[15%] text-center">Price</th>
@@ -12,12 +12,10 @@ const CartTable = ({ cartItems, removeItem, updateQuantity }) => {
             <th className="py-3 px-4 w-[20%] text-center">Subtotal</th>
           </tr>
         </thead>
+
         <tbody>
           {cartItems.map((item) => (
-            <tr
-              key={item.id}
-              className="border-b hover:bg-gray-50 transition-colors"
-            >
+            <tr key={item.id} className="hover:bg-gray-50 transition-colors">
               <td className="py-4 px-4 flex items-center gap-3">
                 <button
                   onClick={() => removeItem(item.id)}
