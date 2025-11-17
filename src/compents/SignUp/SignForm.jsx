@@ -2,8 +2,12 @@ import { useState } from "react";
 import LeftImage from "../SignUp/LeftImage";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux/userSlice";
 
 const SignForm = () => {
+  const dispatch = useDispatch();
+
   // Store form values
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +25,7 @@ const SignForm = () => {
     }));
   };
 
-  // Submit function with toast
+  // Submit function with toast + redux
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -35,6 +39,10 @@ const SignForm = () => {
       return;
     }
 
+    // Redux store save
+    dispatch(setUser(formData));
+
+    // Success toast
     toast.success("Account created successfully!");
   };
 
@@ -50,6 +58,7 @@ const SignForm = () => {
           <h2 className="text-4xl font-semibold mb-4 text-gray-900">
             Create an account
           </h2>
+
           <p className="text-gray-900 mb-6 text-md">Enter your details below</p>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
@@ -60,7 +69,6 @@ const SignForm = () => {
               value={formData.name}
               onChange={handleChange}
               className="w-full border-b border-gray-300 p-2 focus:outline-none focus:border-gray-500"
-              required
             />
 
             <input
@@ -70,7 +78,6 @@ const SignForm = () => {
               value={formData.email}
               onChange={handleChange}
               className="w-full border-b border-gray-300 p-2 focus:outline-none focus:border-gray-500"
-              required
             />
 
             <input
@@ -80,7 +87,6 @@ const SignForm = () => {
               value={formData.password}
               onChange={handleChange}
               className="w-full border-b border-gray-300 p-2 focus:outline-none focus:border-gray-500 mb-10"
-              required
             />
 
             <button

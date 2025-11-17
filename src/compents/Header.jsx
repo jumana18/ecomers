@@ -6,9 +6,13 @@ import { LuShoppingBag } from "react-icons/lu";
 import { IoStarOutline, IoPersonOutline } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux"
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const user = useSelector((state)=>state.user?.user)
+  console.log({user});
+  
 
   return (
     <>

@@ -3,6 +3,7 @@ import Leftimage from "../compents/SignUp/LeftImage";
 import { toast } from "react-toastify";
 
 const Login = () => {
+  
   // State for form inputs
   const [formData, setFormData] = useState({
     email: "",
