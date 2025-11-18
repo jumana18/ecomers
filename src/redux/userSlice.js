@@ -1,22 +1,40 @@
- import {createSlice} from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
+const userSlice = createSlice({
+  name: "user",
+  initialState: {
+    user: {},
+    wishlist: [],
+    cart: [],
+  },
 
-const initialState = {
-    user:{},
-}
+  reducers: {
+    setUser: (state, action) => {
+      state.user = action.payload;
+    },
 
+    addToWishlist: (state, action) => {
+      const item = action.payload;
+      const exists = state.wishlist.some((p) => p.id === item.id);
+      if (!exists) state.wishlist.push(item);
+    },
 
-const userSlice = new createSlice({
-    initialState,
-    name:"user",
-    reducers:{
-        setUser:(state,action)=>{
-            console.log("setUser ::;",action.payload);
-            
-            state.user = action.payload
-        }
-    }
-})
+    addToCart: (state, action) => {
+      const item = action.payload;
+      const exists = state.cart.find((p) => p.id === item.id);
 
-export const {setUser} = userSlice.actions
-export default userSlice.reducer
+      if (exists) {
+        exists.quantity += 1;
+      } else {
+        state.cart.push({ ...item, quantity: 1 });
+      }
+    },
+
+    removeFromCart: (state, action) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload);
+    },
+ },
+});
+
+export const { setUser, addToWishlist,addToCart,removeFromCart,} = userSlice.actions;
+export default userSlice.reducer;

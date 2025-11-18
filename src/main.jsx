@@ -1,22 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import {createBrowserRouter, RouterProvider} from 'react-router'
-import Home from './pages/HomePage.jsx'
-import Contact from'./pages/ContactPage.jsx'
-import About from './pages/AboutPage.jsx'
-import SignUp from './pages/SignUpPage.jsx'
-import Login from './pages/Login.jsx'
-import ErrorPage from './pages/ErrorPage.jsx'
-import WishlisTPage from './pages/Wishlist.jsx'
-import CartPage from './pages/CartPage.jsx'
-import MyAccount from './pages/MyAccount.jsx'
-import CheckoutPage from './pages/CheckoutPage.jsx'
-import ProductDetailPage from './pages/ProductDetailPage.jsx'
-import {Provider} from "react-redux"
-import store from './app/store.js'
-
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Home from "./pages/HomePage.jsx";
+import Contact from "./pages/ContactPage.jsx";
+import About from "./pages/AboutPage.jsx";
+import SignUp from "./pages/SignUpPage.jsx";
+import Login from "./pages/Login.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
+import WishlisTPage from "./pages/Wishlist.jsx";
+import CartPage from "./pages/CartPage.jsx";
+import MyAccount from "./pages/MyAccount.jsx";
+import CheckoutPage from "./pages/CheckoutPage.jsx";
+import ProductDetailPage from "./pages/ProductDetailPage.jsx";
+import { Provider } from "react-redux";
+import store from "./app/store.js";
 
 const router = createBrowserRouter([
   {
@@ -64,18 +63,17 @@ const router = createBrowserRouter([
         element: <CheckoutPage />,
       },
       {
-        path:"/product-details/:id",
-        element:<ProductDetailPage/>
-      }
-     
+        path: "/product-details/:id",
+        element: <ProductDetailPage />,
+      },
     ],
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Provider store={store}>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </Provider>
-  </StrictMode>,
-)
+  </StrictMode>
+);
