@@ -108,7 +108,7 @@ const BillingForm = () => {
               </label>
             </div>
           </form>
-          <OrderSummary/>
+          <OrderSummary />
         </div>
       </div>
     </>

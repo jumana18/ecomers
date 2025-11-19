@@ -1,13 +1,12 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline, IoStarSharp } from "react-icons/io5";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addToWishlist, addToCart } from "../../redux/userSlice";
+import {addToWishlist, addToCart, setSelectedProduct,} from "../../redux/userSlice";
 
 const ProductCrd = ({ item }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   return (
     <div className="max-w-[270px] h-auto p-3 relative group bg-white shadow-md rounded-xl overflow-hidden">
@@ -21,20 +20,19 @@ const ProductCrd = ({ item }) => {
 
         {/* Action Icons */}
         <div className="absolute top-3 right-3 flex flex-col gap-2 z-10">
-          {/*  Add to Wishlist */}
+          {/* Add to Wishlist */}
           <button
             className="bg-white p-1.5 rounded-full shadow hover:bg-gray-100"
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
               dispatch(addToWishlist(item));
-             
             }}
           >
             <FaRegHeart size={16} />
           </button>
 
-          {/* 👁 Quick View */}
+          {/* Quick View (placeholder) */}
           <button
             className="bg-white p-1.5 rounded-full shadow hover:bg-gray-100"
             onClick={(e) => {
@@ -48,8 +46,11 @@ const ProductCrd = ({ item }) => {
         </div>
       </div>
 
-      {/* Navigate to product details */}
-      <Link to={`/product-details/${item.id}`}>
+      {/* Navigate to product details — store selected product in Redux on click */}
+      <Link
+        to={`/product-details/${item.id}`}
+        onClick={() => dispatch(setSelectedProduct(item))}
+      >
         <div className="flex justify-center items-center h-40 mt-4 relative">
           <img
             src={item.image}
@@ -58,13 +59,11 @@ const ProductCrd = ({ item }) => {
             className="max-h-36 object-contain"
           />
 
-          {/*  ADD TO CART */}
+          {/* ADD TO CART (hover reveal) */}
           <div
-            className="absolute bottom-4 left-4 right-4 
-                        opacity-0 translate-y-3 
-                        group-hover:opacity-100 group-hover:translate-y-0 
-                        transition-all duration-300"
+            className="absolute bottom-4 left-4 right-4 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
             onClick={(e) => {
+              // prevent Link navigation when clicking the overlay (we still want Link click when clicking image area)
               e.preventDefault();
               e.stopPropagation();
             }}
@@ -74,9 +73,7 @@ const ProductCrd = ({ item }) => {
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-
-                dispatch(addToCart(item)); // Add to cart
-                
+                dispatch(addToCart(item));
               }}
             >
               Add to Cart

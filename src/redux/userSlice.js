@@ -6,6 +6,8 @@ const userSlice = createSlice({
     user: {},
     wishlist: [],
     cart: [],
+    selectedProduct: {},
+    billingDetails: {}, // NEW
   },
 
   reducers: {
@@ -15,8 +17,9 @@ const userSlice = createSlice({
 
     addToWishlist: (state, action) => {
       const item = action.payload;
-      const exists = state.wishlist.some((p) => p.id === item.id);
-      if (!exists) state.wishlist.push(item);
+      if (!state.wishlist.some((p) => p.id === item.id)) {
+        state.wishlist.push(item);
+      }
     },
 
     addToCart: (state, action) => {
@@ -24,17 +27,38 @@ const userSlice = createSlice({
       const exists = state.cart.find((p) => p.id === item.id);
 
       if (exists) {
-        exists.quantity += 1;
+        exists.quantity += item.quantity ?? 1;
       } else {
-        state.cart.push({ ...item, quantity: 1 });
+        state.cart.push({ ...item, quantity: item.quantity ?? 1 });
       }
     },
 
     removeFromCart: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
     },
- },
+
+    updateCartQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const item = state.cart.find((p) => p.id === id);
+      if (item) item.quantity = quantity;
+    },
+
+    setSelectedProduct: (state, action) => {
+      state.selectedProduct = action.payload;
+    },
+
+   
+  },
 });
 
-export const { setUser, addToWishlist,addToCart,removeFromCart,} = userSlice.actions;
+export const {
+  setUser,
+  addToWishlist,
+  addToCart,
+  removeFromCart,
+  updateCartQuantity,
+  setSelectedProduct,
+
+} = userSlice.actions;
+
 export default userSlice.reducer;

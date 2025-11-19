@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart,  } from "../redux/userSlice";
+import { removeFromCart, updateCartQuantity } from "../redux/userSlice";
 import { Link, useNavigate } from "react-router-dom";
 
 const CartPage = () => {
@@ -8,7 +8,6 @@ const CartPage = () => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.user.cart);
 
-  // Calculate subtotal
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.salePrice * item.quantity,
     0
@@ -16,7 +15,6 @@ const CartPage = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-10">
-      {/* Breadcrumb */}
       <div className="mb-12">
         <p className="text-gray-500">
           <Link to="/" className="hover:text-black">
@@ -27,15 +25,14 @@ const CartPage = () => {
         </p>
       </div>
 
-      {/* Cart Table */}
       <div className="overflow-x-auto w-full">
         <table className="w-full text-left text-sm md:text-base">
           <thead className="bg-gray-100">
             <tr>
-              <th className="py-3 px-4 w-[45%]">Product</th>
-              <th className="py-3 px-4 w-[15%] text-center">Price</th>
-              <th className="py-3 px-4 w-[20%] text-center">Quantity</th>
-              <th className="py-3 px-4 w-[20%] text-center">Subtotal</th>
+              <th className="py-3 px-4">Product</th>
+              <th className="py-3 px-4 text-center">Price</th>
+              <th className="py-3 px-4 text-center">Quantity</th>
+              <th className="py-3 px-4 text-center">Subtotal</th>
             </tr>
           </thead>
 
@@ -49,21 +46,13 @@ const CartPage = () => {
                   >
                     X
                   </button>
-
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-14 h-14 object-contain rounded-md"
-                  />
-
+                  <img src={item.image} className="w-14 h-14 object-contain" />
                   <span className="font-medium text-gray-800">
                     {item.title}
                   </span>
                 </td>
 
-                <td className="py-4 px-4 text-center text-gray-700">
-                  ₹{item.salePrice}
-                </td>
+                <td className="py-4 px-4 text-center">₹{item.salePrice}</td>
 
                 <td className="py-4 px-4 text-center">
                   <select
@@ -86,7 +75,7 @@ const CartPage = () => {
                   </select>
                 </td>
 
-                <td className="py-4 px-4 text-center font-semibold text-gray-800">
+                <td className="py-4 px-4 text-center font-semibold">
                   ₹{(item.salePrice * item.quantity).toFixed(2)}
                 </td>
               </tr>
@@ -95,20 +84,6 @@ const CartPage = () => {
         </table>
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-col md:flex-row justify-between items-center mt-6 gap-3">
-        <Link to="/">
-          <button className="border border-gray-800 px-6 py-2 rounded-md hover:bg-gray-100">
-            Return To Shop
-          </button>
-        </Link>
-
-        <button className="border border-gray-800 px-6 py-2 rounded-md hover:bg-gray-100">
-          Update Cart
-        </button>
-      </div>
-
-      {/* Cart Summary */}
       <div className="grid md:grid-cols-2 gap-8 mt-10">
         <div></div>
 

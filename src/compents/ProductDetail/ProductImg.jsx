@@ -1,13 +1,20 @@
-import React, { useState } from "react";
-import Img1 from "../../assets/thumb1.png";
-import Img2 from "../../assets/thumb2.png";
-import Img3 from "../../assets/thumb3.png";
-import Img4 from "../../assets/thumb4.png";
-import Main from "../../assets/faa80b609e3950aed9181acb44510f859f50d850.png";
+import React, { useState, useEffect } from "react";
 
-const ProductImg = () => {
-  const images = [Img1, Img2, Img3, Img4];
-  const [mainImage, setMainImage] = useState(Main);
+/**
+ * Props:
+ *  - product: object which can contain image (main) and images (array)
+ *
+ * If no product passed, shows nothing.
+ */
+const ProductImg = ({ product }) => {
+  const images = product?.images ?? (product?.image ? [product.image] : []);
+  const [mainImage, setMainImage] = useState(images[0] ?? "");
+
+  useEffect(() => {
+    setMainImage(images[0] ?? "");
+  }, [product]); // update when product changes
+
+  if (!product) return null;
 
   return (
     <div className="flex flex-col md:flex-row gap-6 w-full max-w-5xl mx-auto">
@@ -25,16 +32,21 @@ const ProductImg = () => {
           />
         ))}
       </div>
+
       {/* Main Image - Right */}
       <div className="flex-1 flex items-center justify-center bg-gray-100 rounded-sm p-4">
-        <img
-          src={mainImage}
-          alt="Main Product"
-          className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-contain rounded-lg"
-        />
+        {mainImage ? (
+          <img
+            src={mainImage}
+            alt="Main Product"
+            className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-contain rounded-lg"
+          />
+        ) : (
+          <div className="w-full h-[300px] sm:h-[400px] lg:h-[500px] flex items-center justify-center text-gray-400">
+            No image
+          </div>
+        )}
       </div>
-      {/* Colours */}
-    
     </div>
   );
 };
