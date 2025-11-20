@@ -14,8 +14,9 @@ const CartPage = () => {
   );
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-10">
-      <div className="mb-12">
+    <section className="max-w-7xl mx-auto px-4 py-6 md:py-10">
+      {/* BREADCRUMB */}
+      <div className="mb-8 md:mb-12 text-sm md:text-base">
         <p className="text-gray-500">
           <Link to="/" className="hover:text-black">
             Home
@@ -25,8 +26,9 @@ const CartPage = () => {
         </p>
       </div>
 
-      <div className="overflow-x-auto w-full">
-        <table className="w-full text-left text-sm md:text-base">
+      {/* RESPONSIVE TABLE */}
+      <div className="w-full overflow-x-auto">
+        <table className="w-full text-left text-xs sm:text-sm md:text-base min-w-[600px]">
           <thead className="bg-gray-100">
             <tr>
               <th className="py-3 px-4">Product</th>
@@ -38,25 +40,34 @@ const CartPage = () => {
 
           <tbody>
             {cartItems.map((item) => (
-              <tr key={item.id} className="hover:bg-gray-50">
-                <td className="py-4 px-4 flex items-center gap-3">
+              <tr key={item.id} className="hover:bg-gray-50 border-b">
+                {/* ITEM DETAILS */}
+                <td className="py-4 px-4 flex items-center gap-3 min-w-[150px]">
                   <button
                     onClick={() => dispatch(removeFromCart(item.id))}
                     className="text-red-500 font-bold hover:text-red-700"
                   >
                     X
                   </button>
-                  <img src={item.image} className="w-14 h-14 object-contain" />
+                  <img
+                    src={item.image}
+                    className="w-14 h-14 object-contain rounded"
+                  />
                   <span className="font-medium text-gray-800">
                     {item.title}
                   </span>
                 </td>
 
+                {/* PRICE */}
                 <td className="py-4 px-4 text-center">₹{item.salePrice}</td>
 
+                {/* QUANTITY INPUT */}
                 <td className="py-4 px-4 text-center">
-                  <select
+                  <input
+                    type="number"
+                    min="1"
                     value={item.quantity}
+                    className="border border-gray-300 rounded-md px-2 py-1 w-16 sm:w-20 text-center"
                     onChange={(e) =>
                       dispatch(
                         updateCartQuantity({
@@ -65,16 +76,10 @@ const CartPage = () => {
                         })
                       )
                     }
-                    className="border border-gray-300 rounded-md px-2 py-1"
-                  >
-                    {[1, 2, 3, 4, 5].map((num) => (
-                      <option key={num} value={num}>
-                        {num}
-                      </option>
-                    ))}
-                  </select>
+                  />
                 </td>
 
+                {/* SUBTOTAL */}
                 <td className="py-4 px-4 text-center font-semibold">
                   ₹{(item.salePrice * item.quantity).toFixed(2)}
                 </td>
@@ -84,10 +89,11 @@ const CartPage = () => {
         </table>
       </div>
 
+      {/* CART TOTAL SECTION */}
       <div className="grid md:grid-cols-2 gap-8 mt-10">
         <div></div>
 
-        <div className="border border-gray-300 rounded-md p-6 w-full md:w-[400px] ml-auto">
+        <div className="border border-gray-300 rounded-md p-6 w-full max-w-md ml-auto">
           <h2 className="text-lg font-semibold mb-4">Cart Total</h2>
 
           <div className="flex justify-between py-2 border-b">
@@ -107,7 +113,7 @@ const CartPage = () => {
 
           <button
             onClick={() => navigate("/CheckoitPage")}
-            className="bg-red-500 text-white w-full py-2 rounded-md mt-3 hover:bg-red-600"
+            className="bg-red-500 text-white w-full py-3 rounded-md mt-3 hover:bg-red-600 text-sm md:text-base"
           >
             Proceed to checkout
           </button>

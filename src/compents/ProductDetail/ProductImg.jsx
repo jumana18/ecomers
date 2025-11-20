@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-/**
- * Props:
- *  - product: object which can contain image (main) and images (array)
- *
- * If no product passed, shows nothing.
- */
 const ProductImg = ({ product }) => {
   const images = product?.images ?? (product?.image ? [product.image] : []);
   const [mainImage, setMainImage] = useState(images[0] ?? "");

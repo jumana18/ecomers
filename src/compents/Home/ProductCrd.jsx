@@ -83,7 +83,7 @@ const ProductCrd = ({ item }) => {
       </Link>
 
       {/* Product Title */}
-      <h3 className="mt-3 text-sm font-semibold text-gray-800">{item.title}</h3>
+      <h3 className="mt-3 text-sm font-semibold text-gray-800">{item.title}{item.name}</h3>
 
       {/* Price */}
       <div className="flex items-center gap-2 mt-1">

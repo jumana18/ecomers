@@ -115,3 +115,13 @@ const Featur = () => {
 };
 
 export default Featur;
+
+
+
+
+// import Remot from "../../assets/remot.png";
+// import Lap from "../../assets/lap.png";
+// import Bkash from "../../assets/bacbff99a8fc8e50822cb2d2d168e5d0e8bf7ea6.png";
+// import Visa from "../../assets/cfb0a6ee01b240273b40dab07f8246ef98aed88a.png";
+// import MasterCard from "../../assets/6eefb61d27c754abac218d25d8ea4360de61f8e8.png";
+// import Nagad from "../../assets/b28e31b9c88d0c9b038b82deeb0523d82cffe267.png";

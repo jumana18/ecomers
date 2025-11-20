@@ -47,18 +47,19 @@ const userSlice = createSlice({
       state.selectedProduct = action.payload;
     },
 
-   
+    setBillingDetails: (state, action) => {
+      state.billingDetails = action.payload;
+    },
   },
 });
 
 export const {
   setUser,
   addToWishlist,
-  addToCart,
   removeFromCart,
+  addToCart,
   updateCartQuantity,
   setSelectedProduct,
-
+  setBillingDetails,
 } = userSlice.actions;
-
 export default userSlice.reducer;

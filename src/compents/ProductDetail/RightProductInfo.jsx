@@ -39,7 +39,7 @@ const RightProductInfo = ({ product }) => {
   return (
     <div className="space-y-4">
       {/* Product Title */}
-      <h2 className="text-2xl font-semibold">{product.title}</h2>
+      <h2 className="text-2xl font-semibold">{product.title}{product.name}</h2>
 
       {/* Star Rating */}
       <div className="flex items-center gap-1 text-xl text-[#FFAD33]">

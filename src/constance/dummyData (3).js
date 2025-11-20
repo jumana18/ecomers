@@ -108,10 +108,17 @@ export const flashSaleItems = [
     discountPercent: 60,
     salePrice: 1999,
     image: "https://m.media-amazon.com/images/I/51fH0mZaG4L.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/51fH0mZaG4L.jpg",
+      "https://airpods.pk/wp-content/uploads/2023/01/buds-pro.webp", // extra
+      "https://m.media-amazon.com/images/I/51ZAVug50hL._AC_UF350,350_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/41gbhJbahfL.jpg", // extra
+    ],
+
     stock: 45,
     endsAt: "2025-10-09T23:59:59Z",
     category: "electronics",
-
   },
   {
     id: "2",
@@ -122,6 +129,14 @@ export const flashSaleItems = [
     salePrice: 2999,
     image:
       "https://images-cdn.ubuy.co.in/63b99d9bc3a2076dac5a5c40-motast-smart-watch-2022-watches-for.jpg",
+
+    images: [
+      "https://images-cdn.ubuy.co.in/63b99d9bc3a2076dac5a5c40-motast-smart-watch-2022-watches-for.jpg",
+      "https://rukminim2.flixcart.com/image/480/640/xif0q/smart-watch-band-strap/c/q/u/watch-strap-hook-belt-for-alt-vibe-pro-smartwatch-band-pink-original-imah3j5hzhupnbym.jpeg?q=20",
+      "https://www.imagineonline.store/cdn/shop/files/Apple_Watch_Series_9_LTE_45mm_Pink_Aluminium_Light_Pink_Sport_Band_PDP_Image_Position-10__en-IN_7fffa7c1-8101-4963-81d1-d6e1f7b164df.jpg?v=1759734071&width=823",
+      "https://m.media-amazon.com/images/I/31pEbPo6JhL._AC_UF1000,1000_QL80_.jpg",
+    ],
+
     stock: 25,
     endsAt: "2025-10-09T23:59:59Z",
     category: "wearables",
@@ -135,11 +150,18 @@ export const flashSaleItems = [
     salePrice: 999,
     image:
       "https://m.media-amazon.com/images/I/51g+TY0AVML._UF1000,1000_QL80_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/51g+TY0AVML._UF1000,1000_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/61ikA6akl0L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61YlLhm-DNL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/617xflf5QLL._SX679_.jpg",
+    ],
+
     stock: 100,
     endsAt: "2025-10-09T23:59:59Z",
     category: "computer-accessories",
   },
-
   {
     id: "5",
     title: "Hair Dryer 2000W",
@@ -148,6 +170,14 @@ export const flashSaleItems = [
     discountPercent: 50,
     salePrice: 1299,
     image: "https://m.media-amazon.com/images/I/51-YUy4ePyL.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/51-YUy4ePyL.jpg",
+      "https://m.media-amazon.com/images/I/51L1+bvGtoL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61wAF6+LoJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/613ZfLqDZhL._SX679_.jpg",
+    ],
+
     stock: 60,
     endsAt: "2025-10-09T23:59:59Z",
     category: "beauty",
@@ -161,6 +191,14 @@ export const flashSaleItems = [
     salePrice: 899,
     image:
       "https://m.media-amazon.com/images/I/71TFlkJu1TL._UF894,1000_QL80_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/71TFlkJu1TL._UF894,1000_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/71emiHN6w4L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81gkIXwAvUL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/710qvgnGdXL._SX679_.jpg",
+    ],
+
     stock: 90,
     endsAt: "2025-10-09T23:59:59Z",
     category: "kitchen",
@@ -174,11 +212,18 @@ export const flashSaleItems = [
     discountPercent: 53,
     salePrice: 1399,
     image: "https://m.media-amazon.com/images/I/71PuVChUUIL.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/71PuVChUUIL.jpg",
+      "https://m.media-amazon.com/images/I/71npIH90DCL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71cdoU2ZdCL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/818h-KNQizL._SX522_.jpg",
+    ],
+
     stock: 70,
     endsAt: "2025-10-09T23:59:59Z",
     category: "electronics",
   },
- 
   {
     id: "9",
     title: "Laptop Stand Adjustable",
@@ -188,6 +233,14 @@ export const flashSaleItems = [
     salePrice: 1249,
     image:
       "https://m.media-amazon.com/images/I/61AS07l2cBL._UF1000,1000_QL80_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/61AS07l2cBL._UF1000,1000_QL80_.jpg",
+      "https://m.media-amazon.com/images/I/71aQyQDsvwL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71XcWNWBllL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71xz8-22hrL._SX522_.jpg",
+    ],
+
     stock: 75,
     endsAt: "2025-10-09T23:59:59Z",
     category: "office",
@@ -199,14 +252,21 @@ export const flashSaleItems = [
     originalPrice: 3499,
     discountPercent: 60,
     salePrice: 1399,
-    image:
-      "https://www.digitek.net.in/cdn/shop/files/Untitled_design_21__enhanced.png?v=1727432757&width=3000",
+    image: "https://m.media-amazon.com/images/I/615nlWeedUL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/615nlWeedUL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71pjiasAJ9L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61tc7AOZWjL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71X1AAN7m-L._SL1500_.jpg",
+    ],
+
     stock: 30,
     endsAt: "2025-10-09T23:59:59Z",
     category: "electronics",
   },
- 
 ];
+
 
 
 export const categoryData = [
@@ -365,8 +425,15 @@ export const bestSellingItems = [
     salePrice: 19999,
     rating: 4.8,
     reviewsCount: 8421,
-    image:
-      "https://www.apple.com/newsroom/images/product/airpods/standard/Apple-AirPods-Pro-2nd-gen-hero-220907_big.jpg.large.jpg",
+    image: "https://m.media-amazon.com/images/I/51V04y8dKSL._SY879_.jpg",
+
+    images: [
+      " https://m.media-amazon.com/images/I/51V04y8dKSL._SY879_.jpg",
+      "https://m.media-amazon.com/images/I/61IfqPRNq8L._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61RTbcm63KL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71Nhipmb+dL._SL1500_.jpg",
+    ],
+
     stock: 150,
     isBestSeller: true,
   },
@@ -381,7 +448,14 @@ export const bestSellingItems = [
     salePrice: 6999,
     rating: 4.7,
     reviewsCount: 5213,
-    image: "https://lovellcdn.b-cdn.net/products/952309_4.jpg",
+    image: "https://m.media-amazon.com/images/I/61f9pDQDqlL._SY625_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/61f9pDQDqlL._SY625_.jpg",
+      "https://m.media-amazon.com/images/I/61FMaf5BV2L._SY625_.jpg",
+      "https://m.media-amazon.com/images/I/51G7w6mR4EL._SY625_.jpg",
+      "https://m.media-amazon.com/images/I/61ZiG-3SBxL._SY625_.jpg",
+    ],
     stock: 280,
     isBestSeller: true,
   },
@@ -396,8 +470,14 @@ export const bestSellingItems = [
     salePrice: 124999,
     rating: 4.9,
     reviewsCount: 1832,
-    image:
-      "https://diamu.com.bd/wp-content/uploads/2023/02/Samsung-Galaxy-S23-Ultra-5G-Lavender-300x300.jpg",
+    image: "https://m.media-amazon.com/images/I/717Q2swzhBL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/717Q2swzhBL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71GhjZOlOML._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71cJwSFddoL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61FCE4ZqpcL._SL1500_.jpg",
+    ],
     stock: 80,
     isBestSeller: true,
   },
@@ -428,7 +508,13 @@ export const bestSellingItems = [
     rating: 4.5,
     reviewsCount: 2381,
     image:
-      "https://i.pinimg.com/736x/76/33/c0/7633c0bec9b06631eae3e4f4418045a3.jpg",
+      "https://m.media-amazon.com/images/I/41m9VJEHqiL._SY300_SX300_QL70_FMwebp_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/41m9VJEHqiL._SY300_SX300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/71swPRN4-EL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71GmQRi5XpL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/718ISykOHeL._SX679_.jpg",
+    ],
     stock: 120,
     isBestSeller: true,
   },
@@ -443,8 +529,13 @@ export const bestSellingItems = [
     salePrice: 999,
     rating: 4.7,
     reviewsCount: 4815,
-    image:
-      "https://images-cdn.ubuy.co.in/66155506866c252e317a6c69-l-39-oreal-paris-revitalift-1-5-pure.jpg",
+    image: "https://m.media-amazon.com/images/I/71cwEE3YLAL._SL1300_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/71cwEE3YLAL._SL1300_.jpg",
+      "https://m.media-amazon.com/images/I/61YUUq1UoRL._SL1300_.jpg",
+      "https://m.media-amazon.com/images/I/61gDkhp2Y1L._SL1300_.jpg",
+      "https://m.media-amazon.com/images/I/61WcyDCsROL._SL1300_.jpg",
+    ],
     stock: 600,
     isBestSeller: true,
   },
@@ -459,8 +550,14 @@ export const bestSellingItems = [
     salePrice: 58999,
     rating: 4.6,
     reviewsCount: 2341,
-    image:
-      "https://www.hp.com/de-de/shop/Html/Merch/Images/A2BM6EA-ABD_5_1750x1285.jpg",
+    image: "https://m.media-amazon.com/images/I/71laRLTCSQL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/71laRLTCSQL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71Slo9rzweL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/712DA5cSYEL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71YHpwmjyuL._SL1500_.jpg",
+    ],
     stock: 65,
     isBestSeller: true,
   },
@@ -475,8 +572,12 @@ export const bestSellingItems = [
     salePrice: 2499,
     rating: 4.5,
     reviewsCount: 3104,
-    image:
-      "https://www.juweliervandam.nl/cdn/shop/files/casio-edifice-50th-anniversary-efs-s640ze-1aer-7944896.png?v=1752053763&width=2400",
+    image: "https://m.media-amazon.com/images/I/61P9Ywas3NL._SX679_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/51NXoELxJ8L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51DY2aRCaGL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51mP0cSbUTL._SX679_.jpg",
+    ],
     stock: 300,
     isBestSeller: true,
   },
