@@ -3,10 +3,17 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoEyeOutline, IoStarSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import {addToWishlist, addToCart, setSelectedProduct,} from "../../redux/userSlice";
+import {
+  addToWishlist,
+  addToCart,
+  setSelectedProduct,
+} from "../../redux/userSlice";
 
 const ProductCrd = ({ item }) => {
   const dispatch = useDispatch();
+
+  // Fallback Logic → use title OR name
+  const productTitle = item.title || item.name;
 
   return (
     <div className="max-w-[270px] h-auto p-3 relative group bg-white shadow-md rounded-xl overflow-hidden">
@@ -32,7 +39,7 @@ const ProductCrd = ({ item }) => {
             <FaRegHeart size={16} />
           </button>
 
-          {/* Quick View (placeholder) */}
+          {/* Quick View */}
           <button
             className="bg-white p-1.5 rounded-full shadow hover:bg-gray-100"
             onClick={(e) => {
@@ -46,30 +53,31 @@ const ProductCrd = ({ item }) => {
         </div>
       </div>
 
-      {/* Navigate to product details — store selected product in Redux on click */}
+      {/* Navigate to product details */}
       <Link
-        to={`/product-details/${item.id}`}
+        to={`/product-details/${productTitle}`}
         onClick={() => dispatch(setSelectedProduct(item))}
       >
         <div className="flex justify-center items-center h-40 mt-4 relative">
           <img
             src={item.image}
-            alt={item.title}
+            alt={productTitle}
             loading="lazy"
             className="max-h-36 object-contain"
           />
 
-          {/* ADD TO CART (hover reveal) */}
+          {/* ADD TO CART (Hover Reveal) */}
           <div
-            className="absolute bottom-4 left-4 right-4 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+            className="absolute bottom-4 left-4 right-4 opacity-0 translate-y-3 
+                       group-hover:opacity-100 group-hover:translate-y-0 
+                       transition-all duration-300"
             onClick={(e) => {
-              // prevent Link navigation when clicking the overlay (we still want Link click when clicking image area)
               e.preventDefault();
               e.stopPropagation();
             }}
           >
             <button
-              className="w-full bg-black text-white text-sm font-semibold py-2 transition mb-[-20px]"
+              className="w-full bg-black text-white text-sm font-semibold py-2 transition"
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -83,7 +91,9 @@ const ProductCrd = ({ item }) => {
       </Link>
 
       {/* Product Title */}
-      <h3 className="mt-3 text-sm font-semibold text-gray-800">{item.title}{item.name}</h3>
+      <h3 className="mt-3 text-sm font-semibold text-gray-800">
+        {productTitle}
+      </h3>
 
       {/* Price */}
       <div className="flex items-center gap-2 mt-1">

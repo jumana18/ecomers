@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, updateCartQuantity } from "../redux/userSlice";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,10 +8,25 @@ const CartPage = () => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.user.cart);
 
+  const [coupon, setCoupon] = useState("");
+  const [discount, setDiscount] = useState(0);
+
+  // SUBTOTAL
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.salePrice * item.quantity,
     0
   );
+
+  // APPLY COUPON LOGIC
+  const applyCoupon = () => {
+    if (coupon === "SALE10") {
+      setDiscount(subtotal * 0.1); // 10% discount
+      alert("Coupon Applied Successfully!");
+    } else {
+      alert("Invalid Coupon Code!");
+      setDiscount(0);
+    }
+  };
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-6 md:py-10">
@@ -61,7 +76,7 @@ const CartPage = () => {
                 {/* PRICE */}
                 <td className="py-4 px-4 text-center">₹{item.salePrice}</td>
 
-                {/* QUANTITY INPUT */}
+                {/* QUANTITY */}
                 <td className="py-4 px-4 text-center">
                   <input
                     type="number"
@@ -89,10 +104,43 @@ const CartPage = () => {
         </table>
       </div>
 
-      {/* CART TOTAL SECTION */}
-      <div className="grid md:grid-cols-2 gap-8 mt-10">
-        <div></div>
+      {/* BUTTONS BELOW TABLE */}
+      <div className="flex flex-col md:flex-row justify-between mt-6 gap-4">
+        <Link
+          to="/"
+          className="border border-gray-700 px-6 py-3 rounded-md  text-center"
+        >
+          Return To Shop
+        </Link>
 
+        <button
+      
+          className="border border-gray-700 px-6 py-3 rounded-md "
+        >
+          Update Cart
+        </button>
+      </div>
+
+      {/* COUPON + CART TOTAL */}
+      <div className="grid md:grid-cols-2 gap-8 mt-10">
+        {/* COUPON BOX */}
+        <div className="flex gap-4 items-center">
+          <input
+            type="text"
+            value={coupon}
+            onChange={(e) => setCoupon(e.target.value)}
+            placeholder="Coupon Code"
+            className="border px-4 py-3 rounded-md w-full max-w-sm"
+          />
+          <button
+           
+            className="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600"
+          >
+            Apply Coupon
+          </button>
+        </div>
+
+        {/* CART TOTAL */}
         <div className="border border-gray-300 rounded-md p-6 w-full max-w-md ml-auto">
           <h2 className="text-lg font-semibold mb-4">Cart Total</h2>
 
@@ -108,7 +156,7 @@ const CartPage = () => {
 
           <div className="flex justify-between py-3 font-semibold">
             <span>Total:</span>
-            <span>₹{subtotal.toFixed(2)}</span>
+            <span>₹{(subtotal - discount).toFixed(2)}</span>
           </div>
 
           <button

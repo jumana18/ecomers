@@ -38,7 +38,7 @@ const ProductDetailPage = () => {
           </Link>
           <span className="mx-2">/</span>
           <span className="text-black font-medium">
-            {selectedProduct.title}
+            {selectedProduct.title} {selectedProduct.name}
           </span>
         </p>
       </div>

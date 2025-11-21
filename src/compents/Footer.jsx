@@ -15,7 +15,6 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-10 px-6 sm:px-10 md:px-20">
       <div className="border-b border-gray-700 pb-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
-        
         {/* --- Subscribe Section --- */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Exclusive</h2>
@@ -94,10 +93,26 @@ const Footer = () => {
                 : "hidden"
             } md:block`}
           >
-            <li><a href="#" className="hover:text-white">My Account</a></li>
-            <li><a href="#" className="hover:text-white">Login / Register</a></li>
-            <li><a href="#" className="hover:text-white">Cart</a></li>
-            <li><a href="#" className="hover:text-white">Wishlist</a></li>
+            <li>
+              <a href="#" className="hover:text-white">
+                My Account
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white">
+                Login / Register
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white">
+                Cart
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white">
+                Wishlist
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -123,16 +138,34 @@ const Footer = () => {
                 : "hidden"
             } md:block`}
           >
-            <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" className="hover:text-white">Terms of Use</a></li>
-            <li><a href="#" className="hover:text-white">FAQ</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
+            <li>
+              <a href="#" className="hover:text-white">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white">
+                Terms of Use
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white">
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* --- Download App Section --- */}
         <div>
-          <h3 className="font-semibold mb-4 text-xl sm:text-2xl">Download App</h3>
+          <h3 className="font-semibold mb-4 text-xl sm:text-2xl">
+            Download App
+          </h3>
           <p className="text-gray-300 text-sm sm:text-base mb-4">
             Save $3 with App — New User Only
           </p>
@@ -156,10 +189,22 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex space-x-4 mt-4 text-gray-400">
-            <TiSocialFacebook size={26} className="hover:text-white transition-colors" />
-            <CiTwitter size={26} className="hover:text-white transition-colors" />
-            <FaInstagram size={26} className="hover:text-white transition-colors" />
-            <TiSocialLinkedin size={26} className="hover:text-white transition-colors" />
+            <TiSocialFacebook
+              size={26}
+              className="hover:text-white transition-colors"
+            />
+            <CiTwitter
+              size={26}
+              className="hover:text-white transition-colors"
+            />
+            <FaInstagram
+              size={26}
+              className="hover:text-white transition-colors"
+            />
+            <TiSocialLinkedin
+              size={26}
+              className="hover:text-white transition-colors"
+            />
           </div>
         </div>
       </div>

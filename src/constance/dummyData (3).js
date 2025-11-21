@@ -13,7 +13,8 @@ export const mainBannerData = [
     id: "2",
     title: "New Arrivals in Fashion 👗",
     subtitle: "Fresh styles for your wardrobe",
-    image:"https://sanwara.com/cdn/shop/files/09-09-202400172.jpg?v=1730713695",
+    image:
+      "https://sanwara.com/cdn/shop/files/09-09-202400172.jpg?v=1730713695",
     cta: "Explore",
     targetType: "category",
     targetId: "fashion",
@@ -97,7 +98,6 @@ export const mainBannerData = [
     targetId: "fitness",
   },
 ];
-
 
 export const flashSaleItems = [
   {
@@ -266,8 +266,6 @@ export const flashSaleItems = [
     category: "electronics",
   },
 ];
-
-
 
 export const categoryData = [
   {
@@ -574,6 +572,7 @@ export const bestSellingItems = [
     reviewsCount: 3104,
     image: "https://m.media-amazon.com/images/I/61P9Ywas3NL._SX679_.jpg",
     images: [
+      "https://m.media-amazon.com/images/I/61P9Ywas3NL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51NXoELxJ8L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51DY2aRCaGL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51mP0cSbUTL._SX679_.jpg",
@@ -592,8 +591,14 @@ export const bestSellingItems = [
     salePrice: 9899,
     rating: 4.4,
     reviewsCount: 1429,
-    image:
-      "https://faberindia.com/cdn/shop/products/Highsuction_070c4f55-aceb-42db-8053-4f6c58656ceb.jpg?v=1723032082",
+    image: "https://m.media-amazon.com/images/I/619mslpCeeL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/619mslpCeeL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61R0vrSlSCL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41e1SA-DW0L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61k3VrV8xVL._SX679_.jpg",
+    ],
     stock: 100,
     isBestSeller: true,
   },
@@ -614,7 +619,6 @@ export const bestSellingItems = [
   // },
 ];
 
-
 export const productData = [
   {
     id: "1",
@@ -629,8 +633,14 @@ export const productData = [
     stock: 45,
     rating: 4.9,
     reviewsCount: 1328,
-    image:
-      "https://hips.hearstapps.com/hmg-prod/images/iphone-15-pro-max-review-esquire-65095f09647c8.jpg?crop=0.5xw:1xh;center,top&resize=640:*",
+    image: "https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/712CBkmhLhL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/617JW0DrG8L._SX679_.jpg",
+    ],
     variants: [
       { color: "Natural Titanium", storage: "256GB" },
       { color: "Blue Titanium", storage: "512GB" },
@@ -649,8 +659,14 @@ export const productData = [
     stock: 120,
     rating: 4.5,
     reviewsCount: 5821,
-    image:
-      "https://oasis.opstatics.com/content/dam/oasis/page/2023/global/product/larry/specs/product-black.png",
+    image: "https://m.media-amazon.com/images/I/6175SlKKECL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/6175SlKKECL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71MWoyX0CLL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/614mpYrPSEL._SL1080_.jpg",
+      "https://m.media-amazon.com/images/I/6147+Ug1KcL._SL1500_.jpg",
+    ],
     variants: [
       { color: "Pastel Lime", storage: "128GB" },
       { color: "Chromatic Gray", storage: "256GB" },
@@ -669,8 +685,14 @@ export const productData = [
     stock: 75,
     rating: 4.8,
     reviewsCount: 912,
-    image:
-      "https://store.sony.com.au/dw/image/v2/ABBC_PRD/on/demandware.static/-/Sites-sony-master-catalog/default/dw75455402/images/WH1000XM5P/WH1000XM5P_4.png?sw=442&sh=442&sm=fit",
+    image: "https://m.media-amazon.com/images/I/51YKwVXBhIL._SX522_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/51YKwVXBhIL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/61akHv1sUGL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61HcONRF9nL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/617RL1kdlZL._SL1500_.jpg",
+    ],
     variants: [{ color: "Black" }, { color: "Silver" }],
   },
   {
@@ -686,31 +708,42 @@ export const productData = [
     stock: 210,
     rating: 4.4,
     reviewsCount: 2131,
-    image:
-      "https://tiimg.tistatic.com/fp/1/007/528/plain-brown-colour-mens-slim-fit-pure-cotton-full-sleeve-casual-shirt-028.jpg",
+    image: "https://m.media-amazon.com/images/I/61jKWOi38OL._SX569_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/61jKWOi38OL._SX569_.jpg",
+      "https://m.media-amazon.com/images/I/81nPWJWDt4L._SX569_.jpg",
+      "https://m.media-amazon.com/images/I/71X6mg8UNAL._SX569_.jpg",
+      "https://m.media-amazon.com/images/I/8130Ez26lzL._SX569_.jpg",
+    ],
     variants: [
       { color: "White", size: "M" },
       { color: "Blue", size: "L" },
       { color: "Gray", size: "XL" },
     ],
   },
-  // {
-  //   id: "5",
-  //   name: "Wooden Coffee Table",
-  //   description:
-  //     "Minimalist design coffee table made of solid oak wood with smooth finish.",
-  //   category: "Furniture",
-  //   brand: "UrbanCraft",
-  //   originalPrice: 7499,
-  //   discountPercent: 33,
-  //   salePrice: 4999,
-  //   stock: 65,
-  //   rating: 4.6,
-  //   reviewsCount: 987,
-  //   image:
-  //     "https://images.woodenstreet.de/image/data/coffee-table/reid-coffee-table-revised/updated-set/honey/1.jpg",
-  //   variants: [{ color: "Walnut" }, { color: "Natural Oak" }],
-  // },
+  {
+    id: "5",
+    name: "Wooden Coffee Table",
+    description:
+      "Minimalist design coffee table made of solid oak wood with smooth finish.",
+    category: "Furniture",
+    brand: "UrbanCraft",
+    originalPrice: 7499,
+    discountPercent: 33,
+    salePrice: 4999,
+    stock: 65,
+    rating: 4.6,
+    reviewsCount: 987,
+    image: "https://m.media-amazon.com/images/I/81rn4mtAs4L._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/81rn4mtAs4L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61uiPLXK6pL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/8127NH3kUCL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71fOVnBu-7L._SL1500_.jpg",
+    ],
+    variants: [{ color: "Walnut" }, { color: "Natural Oak" }],
+  },
   // {
   //   id: "6",
   //   name: "Puma Unisex Sneakers",
@@ -744,27 +777,32 @@ export const productData = [
     stock: 800,
     rating: 4.6,
     reviewsCount: 1298,
-    image:
-      "https://images-static.nykaa.com/media/catalog/product/0/2/02c1db8LOREA00000365_2.jpg?tr=w-500",
+    image: "https://m.media-amazon.com/images/I/618tn5t5ZHL._SX522_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/618tn5t5ZHL._SX522_.jpg",
+      "https://m.media-amazon.com/images/I/71MzpkwaEUL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61Te9LmRrnL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71oihtM1THL._SL1500_.jpg",
+    ],
     variants: [{ size: "50ml" }, { size: "100ml" }],
   },
-  {
-    id: "8",
-    name: "Organic Basmati Rice (5kg)",
-    description:
-      "Long-grain, aromatic organic basmati rice sourced from the Himalayas.",
-    category: "Groceries",
-    brand: "24 Mantra",
-    originalPrice: 899,
-    discountPercent: 22,
-    salePrice: 699,
-    stock: 400,
-    rating: 4.7,
-    reviewsCount: 2103,
-    image:
-      "https://5.imimg.com/data5/SELLER/Default/2024/1/379019743/SF/ZX/QQ/208242115/81zkzfdjt8l-ac-uf1000-1000-ql80-500x500.jpg",
-    variants: [{ weight: "5kg" }, { weight: "10kg" }],
-  },
+  // {
+  //   id: "8",
+  //   name: "Organic Basmati Rice (5kg)",
+  //   description:
+  //     "Long-grain, aromatic organic basmati rice sourced from the Himalayas.",
+  //   category: "Groceries",
+  //   brand: "24 Mantra",
+  //   originalPrice: 899,
+  //   discountPercent: 22,
+  //   salePrice: 699,
+  //   stock: 400,
+  //   rating: 4.7,
+  //   reviewsCount: 2103,
+  //   image:
+  //     "https://5.imimg.com/data5/SELLER/Default/2024/1/379019743/SF/ZX/QQ/208242115/81zkzfdjt8l-ac-uf1000-1000-ql80-500x500.jpg",
+  //   variants: [{ weight: "5kg" }, { weight: "10kg" }],
+  // },
   {
     id: "9",
     name: "Resistance Bands Set (5pcs)",
@@ -778,8 +816,14 @@ export const productData = [
     stock: 220,
     rating: 4.8,
     reviewsCount: 1899,
-    image:
-      "https://m.media-amazon.com/images/I/71M76VAWmvL._UF894,1000_QL80_.jpg",
+    image: "https://m.media-amazon.com/images/I/71eUwv9BxoL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/71eUwv9BxoL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71F9xZK4myL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71A2XTW1++L._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61zokdhf+GL._SL1000_.jpg",
+    ],
     variants: [{ level: "Light" }, { level: "Medium" }, { level: "Heavy" }],
   },
   {
@@ -795,9 +839,14 @@ export const productData = [
     stock: 150,
     rating: 4.7,
     reviewsCount: 3411,
-    image:
-      "https://images.philips.com/is/image/philipsconsumer/vrs_3cb6b7df709f08bcbe1f7402adccfbb26ee367cb?$pnglarge$&wid=960",
+    image: "https://m.media-amazon.com/images/I/81gfNCqhONL._SX679_.jpg",
+
+    images: [
+      "https://m.media-amazon.com/images/I/81gfNCqhONL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71F4B+p01QL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81+01Q2jaOL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71LUohlM1bL._SX679_.jpg",
+    ],
     variants: [{ color: "Black" }, { color: "White" }],
   },
 ];
-
