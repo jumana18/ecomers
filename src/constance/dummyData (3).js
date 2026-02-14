@@ -1,24 +1,24 @@
 export const mainBannerData = [
-  {
-    id: "1",
-    title: "Mega Diwali Sale 🎇",
-    subtitle: "Up to 70% OFF on top brands!",
-    image:
-      "https://www.notebookcheck.net/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG",
-    cta: "Shop Now",
-    targetType: "category",
-    targetId: "festive-deals",
-  },
-  {
-    id: "2",
-    title: "New Arrivals in Fashion 👗",
-    subtitle: "Fresh styles for your wardrobe",
-    image:
-      "https://sanwara.com/cdn/shop/files/09-09-202400172.jpg?v=1730713695",
-    cta: "Explore",
-    targetType: "category",
-    targetId: "fashion",
-  },
+  // {
+  //   id: "1",
+  //   title: "Mega Diwali Sale 🎇",
+  //   subtitle: "Up to 70% OFF on top brands!",
+  //   image:
+  //     "https://www.notebookcheck.net/uploads/tx_nbc2/AppleiPhone14Pro__1__01.JPG",
+  //   cta: "Shop Now",
+  //   targetType: "category",
+  //   targetId: "festive-deals",
+  // },
+  // {
+  //   id: "2",
+  //   title: "New Arrivals in Fashion 👗",
+  //   subtitle: "Fresh styles for your wardrobe",
+  //   image:
+  //     "https://sanwara.com/cdn/shop/files/09-09-202400172.jpg?v=1730713695",
+  //   cta: "Explore",
+  //   targetType: "category",
+  //   targetId: "fashion",
+  // },
   {
     id: "3",
     title: "Smartphones Bonanza 📱",
@@ -33,7 +33,7 @@ export const mainBannerData = [
     id: "4",
     title: "Upgrade Your Home 🏠",
     subtitle: "Best deals on furniture and decor",
-    image: "https://images.dunelm.com/30754853.jpg",
+    image: "https://th.bing.com/th/id/OIP.lI-pGwg4tOSQkg0Ru3F-7wHaE7?w=268&h=180&c=7&r=0&o=7&cb=defcache2&dpr=1.3&pid=1.7&rm=3&defcache=1",
     cta: "Shop Furniture",
     targetType: "category",
     targetId: "home-decor",
@@ -58,16 +58,16 @@ export const mainBannerData = [
     targetType: "category",
     targetId: "mens-grooming",
   },
-  {
-    id: "7",
-    title: "Exclusive Watches ⌚",
-    subtitle: "Luxury meets style – starting ₹1,999",
-    image:
-      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQHRJGH86xEi3F3E0pAsdluYVZ8pPatRnfpPLfMYBKT9AgfmHGDs4kG3401dSa2VT93N2I8lNmkwt7f0WSTj1z4g1ftejefp8E6viU0Nfl2T0g0Py2DVB2xhQ",
-    cta: "View Collection",
-    targetType: "category",
-    targetId: "watches",
-  },
+  // {
+  //   id: "7",
+  //   title: "Exclusive Watches ⌚",
+  //   subtitle: "Luxury meets style – starting ₹1,999",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQHRJGH86xEi3F3E0pAsdluYVZ8pPatRnfpPLfMYBKT9AgfmHGDs4kG3401dSa2VT93N2I8lNmkwt7f0WSTj1z4g1ftejefp8E6viU0Nfl2T0g0Py2DVB2xhQ",
+  //   cta: "View Collection",
+  //   targetType: "category",
+  //   targetId: "watches",
+  // },
   {
     id: "8",
     title: "Beauty & Wellness 💅",
@@ -78,25 +78,25 @@ export const mainBannerData = [
     targetType: "category",
     targetId: "beauty-wellness",
   },
-  {
-    id: "9",
-    title: "Back to School 🎒",
-    subtitle: "Essentials for every student",
-    image: "https://m.media-amazon.com/images/I/81aVSC8sAKL._UY1000_.jpg",
-    cta: "Buy Supplies",
-    targetType: "category",
-    targetId: "school-supplies",
-  },
-  {
-    id: "10",
-    title: "Fitness Gear Sale 🏋️‍♂️",
-    subtitle: "Everything you need to stay fit",
-    image:
-      "https://orbitfitness.com.au/cdn/shop/files/C-21X_Spin_Bike_14.jpg?v=1751614048&width=1500",
-    cta: "Get Fit",
-    targetType: "category",
-    targetId: "fitness",
-  },
+  // {
+  //   id: "9",
+  //   title: "Back to School 🎒",
+  //   subtitle: "Essentials for every student",
+  //   image: "https://m.media-amazon.com/images/I/81aVSC8sAKL._UY1000_.jpg",
+  //   cta: "Buy Supplies",
+  //   targetType: "category",
+  //   targetId: "school-supplies",
+  // },
+  // {
+  //   id: "10",
+  //   title: "Fitness Gear Sale 🏋️‍♂️",
+  //   subtitle: "Everything you need to stay fit",
+  //   image:
+  //     "https://orbitfitness.com.au/cdn/shop/files/C-21X_Spin_Bike_14.jpg?v=1751614048&width=1500",
+  //   cta: "Get Fit",
+  //   targetType: "category",
+  //   targetId: "fitness",
+  // },
 ];
 
 export const flashSaleItems = [

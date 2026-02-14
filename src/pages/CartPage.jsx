@@ -17,16 +17,16 @@ const CartPage = () => {
     0
   );
 
-  // APPLY COUPON LOGIC
-  const applyCoupon = () => {
-    if (coupon === "SALE10") {
-      setDiscount(subtotal * 0.1); // 10% discount
-      alert("Coupon Applied Successfully!");
-    } else {
-      alert("Invalid Coupon Code!");
-      setDiscount(0);
-    }
-  };
+const applyCoupon = () => {
+  if (coupon.trim().toUpperCase() === "SALE10") {
+    setDiscount(subtotal * 0.1);
+    alert("Coupon Applied Successfully!");
+  } else {
+    alert("Invalid Coupon Code!");
+    setDiscount(0);
+  }
+};
+
 
   return (
     <section className="max-w-7xl mx-auto px-4 py-6 md:py-10">
@@ -42,67 +42,74 @@ const CartPage = () => {
       </div>
 
       {/* RESPONSIVE TABLE */}
-      <div className="w-full overflow-x-auto">
-        <table className="w-full text-left text-xs sm:text-sm md:text-base min-w-[600px]">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="py-3 px-4">Product</th>
-              <th className="py-3 px-4 text-center">Price</th>
-              <th className="py-3 px-4 text-center">Quantity</th>
-              <th className="py-3 px-4 text-center">Subtotal</th>
-            </tr>
-          </thead>
+    <div className="w-full overflow-x-auto">
+  <table className="w-full table-fixed text-xs sm:text-sm md:text-base">
+    <thead className="bg-gray-100">
+      <tr>
+        <th className="py-3 px-4 w-[40%]">Product</th>
+        <th className="py-3 px-4 w-[20%] text-center">Price</th>
+        <th className="py-3 px-4 w-[20%] text-center">Quantity</th>
+        <th className="py-3 px-4 w-[20%] text-center">Subtotal</th>
+      </tr>
+    </thead>
 
-          <tbody>
-            {cartItems.map((item) => (
-              <tr key={item.id} className="hover:bg-gray-50 border-b">
-                {/* ITEM DETAILS */}
-                <td className="py-4 px-4 flex items-center gap-3 min-w-[150px]">
-                  <button
-                    onClick={() => dispatch(removeFromCart(item.id))}
-                    className="text-red-500 font-bold hover:text-red-700"
-                  >
-                    X
-                  </button>
-                  <img
-                    src={item.image}
-                    className="w-14 h-14 object-contain rounded"
-                  />
-                  <span className="font-medium text-gray-800">
-                    {item.title}
-                  </span>
-                </td>
+    <tbody>
+      {cartItems.map((item) => (
+        <tr key={item.id} className="hover:bg-gray-50 border-b">
+          
+          {/* PRODUCT */}
+          <td className="py-4 px-4 flex items-center gap-3 overflow-hidden">
+            <button
+              onClick={() => dispatch(removeFromCart(item.id))}
+              className="text-red-500 font-bold hover:text-red-700 shrink-0"
+            >
+              X
+            </button>
 
-                {/* PRICE */}
-                <td className="py-4 px-4 text-center">₹{item.salePrice}</td>
+            <img
+              src={item.image}
+              className="w-14 h-14 object-contain rounded shrink-0"
+            />
 
-                {/* QUANTITY */}
-                <td className="py-4 px-4 text-center">
-                  <input
-                    type="number"
-                    min="1"
-                    value={item.quantity}
-                    className="border border-gray-300 rounded-md px-2 py-1 w-16 sm:w-20 text-center"
-                    onChange={(e) =>
-                      dispatch(
-                        updateCartQuantity({
-                          id: item.id,
-                          quantity: Number(e.target.value),
-                        })
-                      )
-                    }
-                  />
-                </td>
+            <span className="font-medium text-gray-800 truncate">
+              {item.title}
+            </span>
+          </td>
 
-                {/* SUBTOTAL */}
-                <td className="py-4 px-4 text-center font-semibold">
-                  ₹{(item.salePrice * item.quantity).toFixed(2)}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          {/* PRICE */}
+          <td className="py-4 px-4 text-center whitespace-nowrap">
+            ₹{item.salePrice}
+          </td>
+
+          {/* QUANTITY */}
+          <td className="py-4 px-4 text-center">
+            <input
+              type="number"
+              min="1"
+              value={item.quantity}
+              className="border border-gray-300 rounded-md px-2 py-1 w-16 text-center"
+              onChange={(e) =>
+                dispatch(
+                  updateCartQuantity({
+                    id: item.id,
+                    quantity: Number(e.target.value),
+                  })
+                )
+              }
+            />
+          </td>
+
+          {/* SUBTOTAL */}
+          <td className="py-4 px-4 text-center font-semibold whitespace-nowrap">
+            ₹{(item.salePrice * item.quantity).toFixed(2)}
+          </td>
+
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
       {/* BUTTONS BELOW TABLE */}
       <div className="flex flex-col md:flex-row justify-between mt-6 gap-4">
@@ -132,12 +139,13 @@ const CartPage = () => {
             placeholder="Coupon Code"
             className="border px-4 py-3 rounded-md w-full max-w-sm"
           />
-          <button
-           
-            className="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600"
-          >
-            Apply Coupon
-          </button>
+    <button
+  onClick={applyCoupon}
+  className="bg-red-500 text-white px-6 py-3 rounded-md hover:bg-red-600"
+>
+  Apply Coupon
+</button>
+
         </div>
 
         {/* CART TOTAL */}
